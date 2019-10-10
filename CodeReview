@@ -1,0 +1,9 @@
+Code review comments:
+
+1. Code does not use java oops concepts.
+2. Using hard wait Thread.sleep, is not recommended. Selenium provides with dynamic wait and it should be used. 
+7. Design pattern can be used such as Page Factory.
+4. Property file can be used to supply once used values which may subject to change due to change in environment i.e. Staging, QA, Dev. like URL.
+5. No utility class.
+6. No Selenium helper class where reusable methods can be added. like click, sendKeys, wait and many more should be in selenium helper class. 
+7. POM (Page Object Model) can be used for better readability and further maintenance. 
