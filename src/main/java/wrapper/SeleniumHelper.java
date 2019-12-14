@@ -1,5 +1,7 @@
 package wrapper;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -58,6 +60,15 @@ public class SeleniumHelper {
 	public WebElement getElement(By by) {
 		try {
 			return driver.findElement(by);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public List<WebElement> getElements(By by) {
+		try {
+			return driver.findElements(by);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
