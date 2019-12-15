@@ -28,9 +28,27 @@ public class SeleniumHelper {
 		}		
 	}
 	
+	public void click(WebElement ele){
+		try{
+			wait.until(ExpectedConditions.elementToBeClickable(ele)).click();
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}		
+	}
+	
 	public void sendKeys(By by, String text){
 		try{
 			wait.until(ExpectedConditions.visibilityOfElementLocated(by)).sendKeys(text);
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}		
+	}
+	
+	public void sendKeys(WebElement ele, String text){
+		try{
+			wait.until(ExpectedConditions.visibilityOf(ele)).sendKeys(text);
 		}
 		catch(Exception e){
 			e.printStackTrace();
